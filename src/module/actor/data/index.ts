@@ -1,4 +1,4 @@
-import { ArmySource } from "@actor/army.ts";
+import { ArmySource } from "@actor/army/data.ts";
 import { CharacterSource } from "@actor/character/data.ts";
 import { CreatureActorType } from "@actor/creature/data.ts";
 import { FamiliarSource } from "@actor/familiar/data.ts";
@@ -13,7 +13,6 @@ type CreatureSource = CharacterSource | NPCSource | FamiliarSource;
 type ActorType = CreatureActorType | "army" | "hazard" | "loot" | "party" | "vehicle";
 
 type ActorSourcePF2e = CreatureSource | ArmySource | HazardSource | LootSource | PartySource | VehicleSource;
-
 interface RollInitiativeOptionsPF2e extends RollInitiativeOptions, StatisticRollParameters {
     secret?: boolean;
 }

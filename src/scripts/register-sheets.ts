@@ -1,3 +1,4 @@
+import { ArmySheetPF2e } from "@actor/army/sheet.ts";
 import { CharacterSheetPF2e } from "@actor/character/sheet.ts";
 import { FamiliarSheetPF2e } from "@actor/familiar/sheet.ts";
 import { HazardSheetPF2e } from "@actor/hazard/sheet.ts";
@@ -65,6 +66,13 @@ export function registerSheets(): void {
         types: ["npc"],
         label: "PF2E.Actor.NPC.SimpleSheet",
         canBeDefault: false,
+    });
+
+    // Army
+    Actors.registerSheet("pf2e", ArmySheetPF2e, {
+        types: ["army"],
+        label: game.i18n.format(sheetLabel, { type: localizeType("army") }),
+        makeDefault: true,
     });
 
     // Hazard
