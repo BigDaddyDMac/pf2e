@@ -7,7 +7,8 @@
             "loot",
             "familiar",
             "party",
-            "vehicle"
+            "vehicle",
+            "army"
         ],
         "templates": {
             "common": {
@@ -436,6 +437,29 @@
             "_migration": {
                 "version": null,
                 "previous": null
+            }
+        },
+        "army": {
+            "templates": [],
+            "attributes": {
+                "ac": {
+                    "value": 10
+                },
+                "hp": {
+                    "value": 10,
+                    "max": 10
+                }
+            },
+            "traits": {
+                "rarity": "common",
+                "type": "infantry"
+            },
+            "details": {
+                "alignment": "N",
+                "description": "",
+                "level": {
+                    "value": 1
+                }
             }
         }
     },
