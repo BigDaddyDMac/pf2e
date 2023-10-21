@@ -243,83 +243,81 @@
                 {{!-- ============== --}}
                 {{!--     Actions    --}}
                 {{!-- ============== --}}
-                {{#if document.itemTypes.action}}
                 <fieldset>
-                    <legend class="compendium-items"><i class="fa-light fa-diamond"></i>&nbsp;Actions</legend>
+                    <legend class="compendium-items"><i class="fa-light fa-diamond"></i>&nbsp;War Actions</legend>
                         <ol class="item-list">
-                            {{#each document.itemTypes.action as |action|}}
-                                <li class="item" data-item-id="{{action._id}}">
-                                    <a class="item-icon item-chat">
-                                        <i class="imgicon fa-solid fa-fw fa-comment-alt"></i>
-                                        <img class="item-icon" src="{{action.img}}" alt="{{action.name}}" />
-                                    </a>
-                                    <label class="item-name">
-                                        <h4>{{action.name}}</h4>
-                                    </label>
-                                    {{#if action.system.frequency}}
-                                        <section class="item-frequency">
-                                            <input type="number" value="{{action.system.frequency.value}}" data-item-id="{{action._id}}" data-item-property="system.frequency.value"/>
-                                            <span>
-                                                /
-                                                {{action.system.frequency.max}}
-                                                {{localize "PF2E.Frequency.per"}}
-                                                {{localize (lookup @root.frequencies action.system.frequency.per)}}
-                                            </span>
-                                        </section>
-                                    {{/if}}
-                                    <div class="item-controls">
-                                            <a class="item-chat chat" data-tooltip="{{localize "PF2E.NPC.SendToChat"}}"><i class="fa-solid fa-fw fa-comment-alt"></i></a>
-                                        {{#if @root.options.editable}}
-                                            <a class="item-control item-edit" data-tooltip="{{localize "PF2E.EditItemTitle"}}"><i class="fa-solid fa-fw fa-edit"></i></a>
-                                            <a class="item-control item-delete" data-tooltip="{{localize "PF2E.DeleteItemTitle"}}"><i class="fa-solid fa-fw fa-trash"></i></a>
+                            {{#each document.itemTypes.campaignFeature as |action|}}
+                                {{#if (eq action.system.category "army-war-action")}}
+                                    <li class="item" data-item-id="{{action._id}}">
+                                        <a class="item-icon item-chat">
+                                            <i class="imgicon fa-solid fa-fw fa-comment-alt"></i>
+                                            <img class="item-icon" src="{{action.img}}" alt="{{action.name}}" />
+                                        </a>
+                                        <label class="item-name">
+                                            <h4>{{action.name}}</h4>
+                                        </label>
+                                        {{#if action.system.frequency}}
+                                            <section class="item-frequency">
+                                                <input type="number" value="{{action.system.frequency.value}}" data-item-id="{{action._id}}" data-item-property="system.frequency.value"/>
+                                                <span>
+                                                    /
+                                                    {{action.system.frequency.max}}
+                                                    {{localize "PF2E.Frequency.per"}}
+                                                    {{localize (lookup @root.frequencies action.system.frequency.per)}}
+                                                </span>
+                                            </section>
                                         {{/if}}
-                                    </div>
-                                </li>
+                                        <div class="item-controls">
+                                                <a class="item-chat chat" data-tooltip="{{localize "PF2E.NPC.SendToChat"}}"><i class="fa-solid fa-fw fa-comment-alt"></i></a>
+                                            {{#if @root.options.editable}}
+                                                <a class="item-control item-edit" data-tooltip="{{localize "PF2E.EditItemTitle"}}"><i class="fa-solid fa-fw fa-edit"></i></a>
+                                                <a class="item-control item-delete" data-tooltip="{{localize "PF2E.DeleteItemTitle"}}"><i class="fa-solid fa-fw fa-trash"></i></a>
+                                            {{/if}}
+                                        </div>
+                                    </li>
+                                {{/if}}
                             {{/each}}
                         </ol>
                 </fieldset>
-                {{/if}}
 
                 {{!-- ============== --}}
                 {{!--     Tactics    --}}
                 {{!-- ============== --}}
                 <fieldset>
                     <legend class="compendium-items"><i class="fa-light fa-flag-swallowtail"></i>&nbsp;Tactics</legend>
-                        {{#if document.itemTypes.feat}}
                         <ol class="item-list">
-                            {{#each document.itemTypes.feat as |feat|}}
-                                <li class="item" data-item-id="{{feat._id}}">
-                                    <a class="item-icon item-chat">
-                                        <i class="imgicon fa-solid fa-fw fa-comment-alt"></i>
-                                        <img class="item-icon" src="{{feat.img}}" alt="{{feat.name}}" />
-                                    </a>
-                                    <label class="item-name">
-                                        <h4>{{feat.name}}</h4>
-                                    </label>
-                                    {{#if feat.system.frequency}}
-                                        <section class="item-frequency">
-                                            <input type="number" value="{{feat.system.frequency.value}}" data-item-id="{{feat._id}}" data-item-property="system.frequency.value"/>
-                                            <span>
-                                                /
-                                                {{feat.system.frequency.max}}
-                                                {{localize "PF2E.Frequency.per"}}
-                                                {{localize (lookup @root.frequencies feat.system.frequency.per)}}
-                                            </span>
-                                        </section>
-                                    {{/if}}
-                                    <div class="item-controls">
-                                            <a class="item-chat chat" data-tooltip="{{localize "PF2E.NPC.SendToChat"}}"><i class="fa-solid fa-fw fa-comment-alt"></i></a>
-                                        {{#if @root.options.editable}}
-                                            <a class="item-control item-edit" data-tooltip="{{localize "PF2E.EditItemTitle"}}"><i class="fa-solid fa-fw fa-edit"></i></a>
-                                            <a class="item-control item-delete" data-tooltip="{{localize "PF2E.DeleteItemTitle"}}"><i class="fa-solid fa-fw fa-trash"></i></a>
+                            {{#each document.itemTypes.campaignFeature as |feat|}}
+                                {{#if (eq feat.system.category "army-tactic")}}
+                                    <li class="item" data-item-id="{{feat._id}}">
+                                        <a class="item-icon item-chat">
+                                            <i class="imgicon fa-solid fa-fw fa-comment-alt"></i>
+                                            <img class="item-icon" src="{{feat.img}}" alt="{{feat.name}}" />
+                                        </a>
+                                        <label class="item-name">
+                                            <h4>{{feat.name}}</h4>
+                                        </label>
+                                        {{#if feat.system.frequency}}
+                                            <section class="item-frequency">
+                                                <input type="number" value="{{feat.system.frequency.value}}" data-item-id="{{feat._id}}" data-item-property="system.frequency.value"/>
+                                                <span>
+                                                    /
+                                                    {{feat.system.frequency.max}}
+                                                    {{localize "PF2E.Frequency.per"}}
+                                                    {{localize (lookup @root.frequencies feat.system.frequency.per)}}
+                                                </span>
+                                            </section>
                                         {{/if}}
-                                    </div>
-                                </li>
+                                        <div class="item-controls">
+                                                <a class="item-chat chat" data-tooltip="{{localize "PF2E.NPC.SendToChat"}}"><i class="fa-solid fa-fw fa-comment-alt"></i></a>
+                                            {{#if @root.options.editable}}
+                                                <a class="item-control item-edit" data-tooltip="{{localize "PF2E.EditItemTitle"}}"><i class="fa-solid fa-fw fa-edit"></i></a>
+                                                <a class="item-control item-delete" data-tooltip="{{localize "PF2E.DeleteItemTitle"}}"><i class="fa-solid fa-fw fa-trash"></i></a>
+                                            {{/if}}
+                                        </div>
+                                    </li>
+                                {{/if}}
                             {{/each}}
                         </ol>
-                    {{else}}
-                    <p class="placeholder"><em>{{localize "PF2E.Warfare.ArmySheet.placeholderTacticsText"}}</em></p>
-                    {{/if}}
                 </fieldset>
 
                 {{!-- ============== --}}
