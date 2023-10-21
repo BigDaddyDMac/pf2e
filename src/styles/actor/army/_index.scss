@@ -1,5 +1,5 @@
 $faded-color: #7a7971;
-$color: darkred; // Was previously "rarity-common" but now that throws an error, diagnose?
+$color: rgb(68, 0, 0); // Was previously "rarity-common" but now that throws an error, diagnose?
 $color-disabled: $light-gray-color;
 $attack-button-color: $secondary-color;
 $damage-button-color: $primary-color;
@@ -305,6 +305,10 @@ div.pf2e.army.sheet form.army-sheet {
                     .item-controls i {
                         flex: 0 0 4rem;
                     }
+                    .item-description {
+                        color: black;
+                        line-height: 1.25rem;
+                    }
                 }
             }
         }
@@ -456,6 +460,8 @@ div.pf2e.army.sheet form.army-sheet {
         background: rgba(0, 0, 0, 0.05);
         border-radius: 4px;
     }
+
+    // Locks the inputs for the statistics when the sheet is edit locked
     &.editLock {
         input.stats,
         label.stats {
