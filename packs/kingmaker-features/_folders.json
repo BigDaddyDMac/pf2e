@@ -1,75 +1,5 @@
 [
     {
-        "_id": "DVa3GkbBsLwGp2In",
-        "color": null,
-        "flags": {},
-        "folder": null,
-        "name": "Kingdom Features",
-        "sort": 0,
-        "sorting": "a",
-        "type": "Item"
-    },
-    {
-        "_id": "Vqp8b64uH35zkncy",
-        "color": null,
-        "flags": {},
-        "folder": null,
-        "name": "Army War Actions",
-        "sort": 0,
-        "sorting": "a",
-        "type": "Item"
-    },
-    {
-        "_id": "e185cDQaLjU3uZ62",
-        "color": null,
-        "flags": {},
-        "folder": null,
-        "name": "Army Tactics",
-        "sort": 0,
-        "sorting": "a",
-        "type": "Item"
-    },
-    {
-        "_id": "i18YzT3zo3skuWng",
-        "color": null,
-        "flags": {},
-        "folder": "Vqp8b64uH35zkncy",
-        "name": "Granted",
-        "sort": 0,
-        "sorting": "a",
-        "type": "Item"
-    },
-    {
-        "_id": "nNaDTkXGZyawxKA6",
-        "color": null,
-        "flags": {},
-        "folder": null,
-        "name": "Army Conditions",
-        "sort": 0,
-        "sorting": "a",
-        "type": "Item"
-    },
-    {
-        "_id": "p5NnHNepx1LSyHe5",
-        "color": null,
-        "flags": {},
-        "folder": null,
-        "name": "Kingdom Feats",
-        "sort": 0,
-        "sorting": "a",
-        "type": "Item"
-    },
-    {
-        "_id": "qKH7pfUGMDUg9obT",
-        "color": null,
-        "flags": {},
-        "folder": null,
-        "name": "Kingdom Activities",
-        "sort": 0,
-        "sorting": "a",
-        "type": "Item"
-    },
-    {
         "_id": "ATB5qP4Nrtmy76AX",
         "color": "#2d6729",
         "flags": {},
@@ -80,17 +10,27 @@
         "type": "Item"
     },
     {
-        "_id": "Cg2ka4hmSu4mYk6g",
-        "color": "#640909",
+        "_id": "DVa3GkbBsLwGp2In",
+        "color": null,
         "flags": {},
-        "folder": "mnFFPFJY0j8GPh3q",
-        "name": "Basic War Actions",
-        "sort": 100000,
+        "folder": "ATB5qP4Nrtmy76AX",
+        "name": "Kingdom Features",
+        "sort": -100000,
         "sorting": "a",
         "type": "Item"
     },
     {
-        "_id": "MLKOaGR10IM0bRuv",
+        "_id": "Vqp8b64uH35zkncy",
+        "color": "#640909",
+        "flags": {},
+        "folder": "mnFFPFJY0j8GPh3q",
+        "name": "Basic War Actions",
+        "sort": 500000,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "e185cDQaLjU3uZ62",
         "color": "#640909",
         "flags": {},
         "folder": "mnFFPFJY0j8GPh3q",
@@ -100,12 +40,12 @@
         "type": "Item"
     },
     {
-        "_id": "f2CWPgq3dvu6cDPp",
+        "_id": "i18YzT3zo3skuWng",
         "color": "#640909",
         "flags": {},
         "folder": "mnFFPFJY0j8GPh3q",
         "name": "Tactical War Actions",
-        "sort": 300000,
+        "sort": 600000,
         "sorting": "a",
         "type": "Item"
     },
@@ -126,6 +66,26 @@
         "folder": "mnFFPFJY0j8GPh3q",
         "name": "Conditions",
         "sort": 200000,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "p5NnHNepx1LSyHe5",
+        "color": null,
+        "flags": {},
+        "folder": "ATB5qP4Nrtmy76AX",
+        "name": "Kingdom Feats",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "qKH7pfUGMDUg9obT",
+        "color": null,
+        "flags": {},
+        "folder": "ATB5qP4Nrtmy76AX",
+        "name": "Kingdom Activities",
+        "sort": 100000,
         "sorting": "a",
         "type": "Item"
     }
