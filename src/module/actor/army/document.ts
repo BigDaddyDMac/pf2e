@@ -5,7 +5,7 @@ import { ArmySource, ArmySystemData } from "./data.ts";
 
 class ArmyPF2e<TParent extends TokenDocumentPF2e | null = TokenDocumentPF2e | null> extends ActorPF2e<TParent> {
     override get allowedItemTypes(): (ItemType | "physical")[] {
-        return ["campaignFeature"];
+        return ["campaignFeature", "effect"];
     }
 }
 
