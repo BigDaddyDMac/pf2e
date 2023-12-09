@@ -61,17 +61,6 @@ export const Ready = {
                 const abandonedModules = new Set<string>([]);
 
                 // Nag the GM for running unmaintained modules
-                const subV10Modules = game.modules.filter(
-                    (m) =>
-                        m.active &&
-                        (m.esmodules.size > 0 || m.scripts.size > 0) &&
-                        // Foundry does not enforce the presence of `Module#compatibility.verified`, but modules
-                        // without it will also not be listed in the package manager. Skip warning those without it in
-                        // case they were made for private use.
-                        !!m.compatibility.verified &&
-                        (abandonedModules.has(m.id) ||
-                            !foundry.utils.isNewerVersion(m.compatibility.verified, "10.312")),
-                );
 
                 for (const badModule of subV10Modules) {
                     const message = game.i18n.format("PF2E.ErrorMessage.SubV9Module", { module: badModule.title });
